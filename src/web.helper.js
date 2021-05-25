@@ -9,7 +9,7 @@ export default class WebHelper
   {
     let pluginsList = "";
 
-    for (var i = 0; i < navigator.plugins.length; i++) 
+    for (let i = 0; i < navigator.plugins.length; i++) 
     {
       if (i == navigator.plugins.length - 1) 
       {

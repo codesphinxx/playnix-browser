@@ -1,6 +1,6 @@
 {
   "name": "playnix-browser",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Playnix JavaScript SDKs for browsers",
   "license": "BSD-3-Clause",
   "author": {
@@ -17,7 +17,8 @@
   },
   "dependencies": {
     "playnix-core": "^0.0.1",
-    "playnix-types": "^0.0.3"
+    "playnix-types": "^0.0.3",
+    "ua-parser-js": "^0.7.28"
   },
   "devDependencies": {
     "@babel/core": "^7.14.3",
@@ -25,7 +26,6 @@
     "babel-eslint": "^10.1.0",
     "eslint": "^7.27.0",
     "terser-webpack-plugin": "^5.1.2",
-    "ua-parser-js": "^0.7.28",
     "webpack": "^5.37.1",
     "webpack-cli": "^4.7.0"
   },

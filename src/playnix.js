@@ -64,6 +64,11 @@ class PlaynixSession extends PlaynixBaseClient
         });
     }
 
+    getLoginStatus() 
+    {
+        throw new Error('NotImplementedException: This method was not implemented for the target framework');
+    }
+
     /**
      * @public
      * @param {Object} data Player data
@@ -89,6 +94,9 @@ class PlaynixSession extends PlaynixBaseClient
         });
     }
 
+    /**
+     * @public
+     */
     loadGameData() 
     {
         return new Promise((resolve, reject) => {
