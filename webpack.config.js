@@ -19,8 +19,10 @@ const config = {
   output: {
     path: __dirname + '/dist',
     filename: 'playnix.min.js',
-    libraryTarget: 'umd',
-    umdNamedDefine: true
+    library: {
+      type: 'umd',
+      name: 'playnix'
+    }
   },
   module: {
     rules: [
