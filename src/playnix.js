@@ -1,6 +1,6 @@
 
 import {PlaynixBaseClient} from 'playnix-core';
-import BrowserLogClient from './log.client';
+import {lognetic} from 'lognetic-browser';
 import { PlaynixOptions } from 'playnix-types';
 
 class PlaynixSession extends PlaynixBaseClient
@@ -12,8 +12,9 @@ class PlaynixSession extends PlaynixBaseClient
     */
     _setup(key, options)
     {
-        BrowserLogClient.init(key, options);
-        this.options = BrowserLogClient.options;                
+        lognetic.init(key, options);
+        this.options = lognetic.options;
+        this.lognetic = lognetic;              
     }
 
     /**

@@ -31,7 +31,7 @@ lognetic.writeMessage(message, data);
 message (required): the custom message to log <br/>
 data: additional data to send(must contains values of string, number, or boolean)
 
-### playnix.writeMessage
+### playnix.writeEvent
 Sends a custom info-level message.
 ```html
 playnix.writeMessage(message);

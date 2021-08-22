@@ -1,6 +1,6 @@
 {
   "name": "playnix-browser",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Playnix JavaScript SDKs for browsers",
   "license": "BSD-3-Clause",
   "author": {
@@ -16,8 +16,9 @@
     "build": "webpack"
   },
   "dependencies": {
-    "playnix-core": "^0.0.2",
-    "playnix-types": "^0.0.4",
+    "lognetic-browser": "^0.0.3",
+    "playnix-core": "^0.0.6",
+    "playnix-types": "^0.0.8",
     "ua-parser-js": "^0.7.28"
   },
   "devDependencies": {
