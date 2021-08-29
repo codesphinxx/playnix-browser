@@ -8,10 +8,9 @@ declare module 'playnix-browser/playnix' {
   class PlaynixSession {
       /**
       * @protected
-      * @param {String} key
       * @param {PlaynixOptions} options
       */
-      protected _setup(key: string, options: any): void;
+      protected _setup(options: any): void;
       options: any;
       lognetic: any;
       /**

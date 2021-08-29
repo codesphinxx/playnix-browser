@@ -1,18 +1,16 @@
-
 import {PlaynixBaseClient} from 'playnix-core';
 import {lognetic} from 'lognetic-browser';
-import { PlaynixOptions } from 'playnix-types';
+import {PlaynixOptions} from 'playnix-types';
 
 class PlaynixSession extends PlaynixBaseClient
 {
     /**
     * @protected
-    * @param {String} key
     * @param {PlaynixOptions} options
     */
-    _setup(key, options)
+    _setup(options)
     {
-        lognetic.init(key, options);
+        lognetic.init(options);
         this.options = lognetic.options;
         this.lognetic = lognetic;              
     }

@@ -1,13 +1,13 @@
 {
   "name": "playnix-browser",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Playnix JavaScript SDKs for browsers",
   "license": "BSD-3-Clause",
   "author": {
     "name": "Code Sphinx",
     "url": "https://twitter.com/codesphinx"
   },
-  "main": "./src/index.js",
+  "main": "./dist/playnix.js",
   "module": "./src/index.js",
   "types": "./index.d.ts",
   "repository": {
@@ -18,9 +18,9 @@
     "build": "npm-dts generate && webpack --env=mode=development && webpack --env=mode=production"
   },
   "dependencies": {
-    "lognetic-browser": "^0.0.5",
-    "playnix-core": "^0.0.8",
-    "playnix-types": "^0.1.0",
+    "lognetic-browser": "^0.0.6",
+    "playnix-core": "^0.1.1",
+    "playnix-types": "^0.1.1",
     "ua-parser-js": "^0.7.28"
   },
   "devDependencies": {
