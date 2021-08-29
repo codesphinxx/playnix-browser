@@ -12,13 +12,28 @@ let plugins = [
   new webpack.LoaderOptionsPlugin({ options: {} })
 ];
 
-const config = {
+let minifier = {
+  minimize: true,
+  minimizer: [
+    new TerserPlugin({
+      extractComments: false,
+      terserOptions: {
+        mangle: true,
+        format: {
+          comments: false
+        }
+      },
+    }),
+  ],
+};
+
+module.exports = (env) => ({
   entry: __dirname + '/src/index.js',
-  devtool:'source-map',
-  mode: "production",
+  devtool:env.mode === 'production' ? false : 'source-map',
+  mode: env.mode,
   output: {
     path: __dirname + '/dist',
-    filename: 'playnix.min.js',
+    filename: env.mode === 'production' ? 'playnix.min.js' : 'playnix.js',
     library: {
       type: 'umd'
     }
@@ -32,22 +47,10 @@ const config = {
       }
     ]
   },
-  optimization: {
-      minimize: true,
-      minimizer: [
-        new TerserPlugin({
-          extractComments: false,
-          terserOptions: {
-            mangle: true, 
-          },
-        }),
-      ],
-  },
+  optimization: env.mode === 'production' ? minifier : {},
   resolve: {
     modules: ['./node_modules', path.resolve('./src')],
     extensions: ['.json', '.js']
   },
   plugins: plugins
-};
-
-module.exports = config;
+});
